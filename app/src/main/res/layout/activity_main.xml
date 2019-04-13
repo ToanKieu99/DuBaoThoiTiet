@@ -16,7 +16,8 @@
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="35dp"
+            android:layout_weight="0.5"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="40dp"
@@ -24,18 +25,21 @@
             app:cardCornerRadius="20dp">
 
             <LinearLayout
+                android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:weightSum="6"
                 android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/edtSeach"
                     android:layout_width="0dp"
-                    android:layout_height="35dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:textSize="20sp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_weight="7"
+                    android:layout_weight="5.2"
                     android:background="#00000000"
                     android:hint="Tìm Kiếm..."
                     android:textColor="#DDDCDC"
@@ -45,62 +49,69 @@
                 <Button
                     android:id="@+id/btnSearch"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
-                    android:layout_marginRight="10dp"
-                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.8"
                     android:background="@drawable/ic_search_black_24dp" />
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
 
-        <TextView
-            android:id="@+id/tvTenthanhpho"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_weight="4"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:text="Tên thành phố"
-            android:textColor="#FFFFFF"
-            android:textSize="19sp" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tvTenquocgia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:text="Tên quốc gia"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+            <TextView
+                android:id="@+id/tvTenthanhpho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Tên thành phố"
+                android:textColor="#FFFFFF"
+                android:textSize="19sp" />
 
-        <ImageView
-            android:id="@+id/imgIcon"
-            android:layout_width="150dp"
-            android:layout_height="110dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:src="@drawable/ic_may1" />
+            <TextView
+                android:id="@+id/tvTenquocgia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Tên quốc gia"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/tvNhietDo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:text="Nhiệt độ"
-            android:textColor="#EEEDED"
-            android:textSize="35sp" />
+            <ImageView
+                android:id="@+id/imgIcon"
+                android:layout_width="150dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/ic_may1" />
 
-        <TextView
-            android:id="@+id/tvTrangThai"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:text="Trạng thái"
-            android:textColor="#F1F1F1"
-            android:textSize="23sp" />
+            <TextView
+                android:id="@+id/tvNhietDo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Nhiệt độ"
+                android:textColor="#EEEDED"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/tvTrangThai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="Trạng thái"
+                android:textColor="#F1F1F1"
+                android:textSize="23sp" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -109,6 +120,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginRight="30dp"
             android:gravity="center"
+            android:layout_weight="3"
             android:orientation="horizontal"
             android:weightSum="3">
 
@@ -186,38 +198,37 @@
 
         </LinearLayout>
 
+
         <TextView
             android:id="@+id/tvDay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="20dp"
+            android:layout_weight="1"
             android:layout_marginRight="30dp"
             android:gravity="center"
             android:text="Ngày Cập nhập"
             android:textColor="#fff"
             android:textSize="25dp" />
 
-        <android.support.v7.widget.CardView
+
+
+        <Button
             android:id="@+id/btnChangeActivity"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
             android:layout_marginRight="30dp"
-            app:cardElevation="3dp"
-            android:backgroundTint="#34000000"
-            app:cardCornerRadius="20dp">
+            android:text="7 days"
+            android:textSize="27sp"
+            android:textAllCaps="false"
+            android:layout_weight="0.5"
+            android:textColor="#fff"
+            android:background="@drawable/border_button"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Các Ngày tiếp"
-                android:textColor="#fff"
-                android:textSize="20sp" />
-
-        </android.support.v7.widget.CardView>
 
     </LinearLayout>
 </LinearLayout>
